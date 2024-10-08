@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-05 17:34:51.415799",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_uthm",
+  "date_out",
+  "customer",
+  "column_break_zrlm",
+  "time_out",
+  "staff_name",
+  "column_break_fwbg",
+  "sales_voucher",
+  "payment_settled",
+  "section_break_horl",
+  "vanout_details",
+  "section_break_imwv",
+  "total_charged",
+  "column_break_nkip",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_uthm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vanout",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date_out",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Out"
+  },
+  {
+   "fieldname": "time_out",
+   "fieldtype": "Datetime",
+   "label": "Time Out"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "staff_name",
+   "fieldtype": "Link",
+   "label": "Staff Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "sales_voucher",
+   "fieldtype": "Link",
+   "label": "Sales Voucher",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "column_break_zrlm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "payment_settled",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Settled",
+   "options": "Pending\nApproved\nPaid\nRejected"
+  },
+  {
+   "fieldname": "section_break_horl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vanout_details",
+   "fieldtype": "Table",
+   "label": "Vanout Details",
+   "options": "Vanout Details"
+  },
+  {
+   "fieldname": "section_break_imwv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_charged",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Charged"
+  },
+  {
+   "fieldname": "column_break_nkip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fwbg",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-10-07 20:11:37.487099",
+ "modified_by": "Administrator",
+ "module": "Truckout Toown",
+ "name": "Vanout",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

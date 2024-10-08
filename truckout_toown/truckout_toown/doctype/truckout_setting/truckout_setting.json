@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-05 23:00:59.270249",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_truckout",
+  "section_break_mkfe",
+  "enable_on_item",
+  "select_item",
+  "charges_per_qty",
+  "column_break_oqto",
+  "enable_on_customer",
+  "minium_charge_amount",
+  "charge_fomular",
+  "section_break_qgoa",
+  "account_loan"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_on_item",
+   "fieldtype": "Check",
+   "label": "Enable On Item"
+  },
+  {
+   "fieldname": "select_item",
+   "fieldtype": "Link",
+   "label": "Select Item",
+   "options": "Item",
+   "read_only_depends_on": "eval: doc.enable_on_item != 1"
+  },
+  {
+   "fieldname": "charges_per_qty",
+   "fieldtype": "Float",
+   "label": "Charges Per Qty",
+   "read_only_depends_on": "eval: doc.enable_on_item != 1"
+  },
+  {
+   "fieldname": "column_break_oqto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_on_customer",
+   "fieldtype": "Check",
+   "label": "Enable On Customer"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_truckout",
+   "fieldtype": "Check",
+   "label": "Enable Truckout"
+  },
+  {
+   "depends_on": "eval:doc.enable_truckout == 1",
+   "fieldname": "section_break_mkfe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "2.5% or Net Total * 0.005",
+   "fieldname": "charge_fomular",
+   "fieldtype": "Data",
+   "label": "Minium Charge Fomular",
+   "read_only_depends_on": "eval: doc.enable_on_customer != 1"
+  },
+  {
+   "fieldname": "minium_charge_amount",
+   "fieldtype": "Currency",
+   "label": "Minium Charge Amount",
+   "read_only_depends_on": "eval: doc.enable_on_customer != 1"
+  },
+  {
+   "depends_on": "eval:doc.enable_truckout == 1",
+   "fieldname": "section_break_qgoa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "account_loan",
+   "fieldtype": "Link",
+   "label": "Account Loan",
+   "options": "Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-10-07 21:57:21.979810",
+ "modified_by": "Administrator",
+ "module": "Truckout Toown",
+ "name": "Truckout Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
